@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/myscript.js"></script>
+    <title>Aula 2</title>
+</head>
+<body>
+    <div class="content">
+        <div clas="dataehora">
+            <h2>Veja a data atual</h2>
+            <button onclick="exibirDataHora()" >Clique AQUI para ver a data e hora </button>
+            <p id="out"> </p>
+        
+        </div>
+        <div class="exercicio1">
+            <h1 id="texto">vilha</h1>
+            <button onclick="transferir()">APERTE AQUI</button>
+
+            <p id="copia">o texto vai aparecer AQUI</p>
+        </div>
+    </div>
+
+    <script>
+        function exibirDataHora(){
+            document.getElementById('out').innerHTML = Date ()
+        }
+
+
+    </script>
+
+    <div class="alterasrc">
+        <button onclick="ligaLampada()">Ascenda a lampada</button>
+        <img id="lampada" src="img/pic_bulboff.gif" alt="Lamapada">
+        <button onclick="apagaLampada()">Apague a Lampada</button>
+    </div>
+
+    <!-- -->
+
+    <div class="alteraestilo">
+        <p id="parestilo">Este texto tem estilo!</p>
+        <button onclick="aumentaFonte()">Aumentar a fonte </button>
+        <button onclick="mudaCor()">Muda a cor</button>
+        <button onclick="mudaAlinhamento()">Muda alinhamento</button>
+    </div>
+
+    <div class="calculadora">
+            <h3>CALCULADORA</h3>
+        
+        <div>
+            <button >Item 1</button>
+            <input id="item1" type="number">
+        
+            <button>Item 2</button>
+            <input id="item2" type="number">
+        </div>
+        <div> 
+            <h4 >Operação</h4>
+            <button id="soma" >soma</button>
+            <button id="subtracao" >subtração</button>
+            <button >multiplicação</button>
+            <button >divisão</button>
+        </div>
+        <div>
+            <button onclick="calcular()">CALCULAR</button>
+            <p id="resultado">o resultado é: </p>
+
+        </div>
+    </div>
+    
+</body>
+</html>

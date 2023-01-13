@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/myscriptcalculadora.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="calculadora">
+        <h2>CALCULADORA</h2>
+    
+    <div class="centralizar">
+        <button class="botao" >Item 1</button>
+        <input id="item1" type="number">
+    
+        <button class="botao">Item 2</button>
+        <input id="item2" type="number">
+    </div>
+    <div class="centralizar"> 
+        <h4 >Qual Operação você deseja realisar?</h4>
+        <button class="botao" onclick="usarSoma()" >soma</button>
+        <button class="botao" onclick="usarSubtracao()" >subtração</button>
+        <button class="botao" onclick="usarMultiplicacao()" >multiplicação</button>
+        <button class="botao" onclick="usarDivisao()" >divisão</button>
+    </div>
+    <input id="operador" type="hidden" >
+    <div class="centralizar">
+        <p></p>
+
+        <button id="botaocalcular" onclick="calcular()">CALCULAR</button>
+        <p id="resultado">o resultado é :   </p>
+
+    </div>
+</div>
+    
+</body>
+</html>

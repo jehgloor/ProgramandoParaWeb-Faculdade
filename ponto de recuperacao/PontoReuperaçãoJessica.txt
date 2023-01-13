@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação</title>
+</head>
+<body>
+    <h1>Adivinhe os valores secretos</h1>
+    <p>Valor 1</p>
+    <input type="number" id="in1">
+
+    <p>Valor 2</p>
+    <input type="number" id="in2">
+
+    <p>Valor 3</p>
+    <input type="number" id="in3">
+
+    <p>Valor 4</p>
+    <input type="number" id="in4">
+    <br><br>
+    <input type="button" value="Enviar" onclick="verificar()">
+
+    <p id="resultado"></p>
+    
+    <script src="provaProf.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+function verificar(){
+    let arrayChave = new Array(3,5,9,12)
+    
+        let leitura = new Array (parseInt(document.getElementById('in1').value),
+                                parseInt(document.getElementById('in2').value),
+                                parseInt(document.getElementById('in3').value),
+                                parseInt(document.getElementById('in4').value))
+    
+    let valoresCorretos = ""
+    let erros = 0;
+    let valoresErrados = ""
+    for(let i = 0 ; i < 4;i++){
+        let existe = false;
+        for(let j = 0 ; j < 4 ;j++){
+            if(leitura[i]==arrayChave[j]){
+                valoresCorretos = valoresCorretos + `${leitura[i]} -`
+                existe = true;
+                break;
+            }   
+        }
+        if(!existe){
+            valoresErrados = valoresErrados + `${leitura[i]} -`
+            erros = erros + 1;
+        }
+    }
+        if(erros == 4){
+            //aqui só quis deixar verdinho , que é a cor do sucesso
+            //document.body.style.backgroundColor = 'green'
+
+            alert('SUCESSO!!')
+        }
+        if(erros == 0){
+            document.body.style.backgroundColor = 'red'
+            alert('Errou todos')
+        }
+        document.getElementById('resultado').innerHTML = `Você errou ${erros} valores.<br><br>Itens incorretos ${valoresErrados}.<br><br> Itens Corretos ${valoresCorretos}`
+}

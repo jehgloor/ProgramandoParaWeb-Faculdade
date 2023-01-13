@@ -1,0 +1,33 @@
+
+body{
+    margin: 0;
+}
+
+#divMenu{
+    background-color: rgb(212, 212, 212);
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0 ;
+    left: 0;
+    overflow-x: hidden;
+}
+
+#divMenu a{
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#menu :hover{
+ background-color: rgb(64, 216, 64);
+
+} 
+
+.content{
+    margin-left: 200px;
+    padding-left: 20px;
+}
+
+

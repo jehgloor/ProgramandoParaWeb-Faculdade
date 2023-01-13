@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Outros usos de innerHTML</h2>
+    <p id="inP">A propriedade innerHTML altera ou retorna o conteudo de um elemento HTML</p>
+    <button type="button" onclick="myFunction()">Pegar valor do paragrafo acima.</button>
+    <p id="outP"></p>
+
+    <script>
+         function myFunction(){
+         var x = document.getElementById("inP").innerHTML;
+         document.getElementById("outP").innerHTML = x;
+         }
+    </script> 
+</body>
+</html>
